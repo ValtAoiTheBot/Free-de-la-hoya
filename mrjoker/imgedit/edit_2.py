@@ -19,7 +19,7 @@ async def circle_with_bg(client, message):
             a = await client.download_media(
                 message=message.reply_to_message, file_name=download_location
             )
-            await msg.edit("Processing Image...🤡")
+            await msg.edit("Processing Image...")
             img = Image.open(a).convert("RGB")
             npImage = np.array(img)
             h, w = img.size
@@ -64,7 +64,7 @@ async def circle_without_bg(client, message):
             a = await client.download_media(
                 message=message.reply_to_message, file_name=download_location
             )
-            await msg.edit("Processing Image...🤡")
+            await msg.edit("Processing Image...")
             img = Image.open(a).convert("RGB")
             npImage = np.array(img)
             h, w = img.size
@@ -110,7 +110,7 @@ async def sticker(client, message):
             a = await client.download_media(
                 message=message.reply_to_message, file_name=download_location
             )
-            await msg.edit("Processing Image...🤡")
+            await msg.edit("Processing Image...")
             os.rename(a, edit_img_loc)
             await message.reply_to_message.reply_sticker(edit_img_loc, quote=True)
             await msg.delete()
@@ -159,7 +159,7 @@ async def edge_curved(client, message):
             a = await client.download_media(
                 message=message.reply_to_message, file_name=download_location
             )
-            await msg.edit("Processing Image...🤡")
+            await msg.edit("Processing Image...")
             im = Image.open(a)
             im = add_corners(im, 100)
             edit_img_loc = "./DOWNLOADS" + "/" + userid + "/" + "edge_curved.webp"
@@ -198,7 +198,7 @@ async def contrast(client, message):
             a = await client.download_media(
                 message=message.reply_to_message, file_name=download_location
             )
-            await msg.edit("Processing Image...🤡")
+            await msg.edit("Processing Image...")
             image = Image.open(a)
             contrast = ImageEnhance.Contrast(image)
             edit_img_loc = "./DOWNLOADS" + "/" + userid + "/" + "contrast.jpg"
@@ -256,7 +256,7 @@ async def sepia_mode(client, message):
             a = await client.download_media(
                 message=message.reply_to_message, file_name=download_location
             )
-            await msg.edit("Processing Image...🤡")
+            await msg.edit("Processing Image...")
             image = Image.open(a)
             new_img = sepia(image)
             edit_img_loc = "./DOWNLOADS" + "/" + userid + "/" + "sepia.jpg"
@@ -300,7 +300,7 @@ async def pencil(client, message):
             a = await client.download_media(
                 message=message.reply_to_message, file_name=download_location
             )
-            await msg.edit("Processing Image...🤡")
+            await msg.edit("Processing Image...")
             img = cv2.imread(a)
             img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             img_invert = cv2.bitwise_not(img_gray)
@@ -354,7 +354,7 @@ async def cartoon(client, message):
             a = await client.download_media(
                 message=message.reply_to_message, file_name=download_location
             )
-            await msg.edit("Processing Image...🤡")
+            await msg.edit("Processing Image...")
             img = cv2.imread(a)
             edges = cv2.Canny(img, 100, 200)
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
