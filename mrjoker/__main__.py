@@ -218,7 +218,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ 𝗕𝗔𝗖𝗞", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
                     ),
                 )
 
@@ -241,9 +241,9 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
             )
-   else:
+    else:
         update.effective_message.reply_photo(
-            MRJOKER_IMAGS, caption= "<code>Free De La Hoya ʜᴇʀᴇ ғᴏʀ ʏᴏᴜ❤\nI am Awake Since</code>: <code>{}</code>".format(
+            INNEXIA_img, caption= "<code>Free De La Hoya ʜᴇʀᴇ ғᴏʀ ʏᴏᴜ❤\nI am Awake Since</code>: <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
