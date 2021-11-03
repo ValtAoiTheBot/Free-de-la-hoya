@@ -535,7 +535,6 @@ Examples:
 ╔*Overall Information about you:*
 ╚ `/info`*:* get information about a user.
 *What is that health thingy?*
- Come and see [HP System explained](https://telegra.ph/What-is-that-health-bar-that-Saitama-displays-on-info-07-30)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
