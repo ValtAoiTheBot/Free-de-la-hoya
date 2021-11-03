@@ -72,7 +72,7 @@ async def photo(client: Client, message: Message):
     try:
         await client.send_message(
             chat_id=message.chat.id,
-            text="Select your required mode from below! 🤡",
+            text="Select your required mode from below!",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -447,7 +447,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 __mod_name__ = "Image Editor"
 __help__ = """
-Cutiepii have some advanced image editing tools inbuilt
 Bright, Circle, RemBG, Blur, Border, Flip, Glitch, Sticker maker and more
   🔹 `/edit [reply to image]`*:* Open the image editor
   🔹 `/rmbg [REPLY]`*:* Revove BG of replied image/sticker.
