@@ -74,45 +74,59 @@ def get_readable_time(seconds: int) -> str:
 
 MRJOKER_IMG = "https://www.linkpicture.com/q/Orange-and-White-Funny-Dating-Animated-Video-Presentation.gif"
 
+MRJOKER_IMAGS = "https://telegra.ph/file/20cfbdc8cb12c01b3b7db.jpg"
+
 MRJOKER_AUD = "https://audio.jukehost.co.uk/kKJkdHgoMPeqdel4sDrEHr7m4U6o4Xya"
 
 
 PM_START_TEXT = """
-*Hello there*, *I*'*m* [𝓜𝓻,𝓙𝓸𝓴𝓮𝓻](https://telegra.ph/file/6525d89de5b72003d80fa.png)
-*I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group*
-🍃🔻 **Make sure you read** `INFO` **Section Below** 🔺🍃 
+ Hey There, I'm [Free De La Hoya](https://telegra.ph/file/c71b7f255824195618a9d.jpg)
+I Am An Cartoon Themed Group Management Bot.
+Built By Pigasus group admin, I Specialize In Managing Cartoon Eccentric Communities.
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="🤡 𝗛𝗘𝗟𝗣 🤡", callback_data="help_back"),
-    ],
-   # [
-     #   InlineKeyboardButton(
-     #       text ="Language", callback_data="set_lang_"),
-    #],
-    [
-        InlineKeyboardButton(text="🚀 𝗜𝗡𝗙𝗢 🚀", callback_data="mrjoker_"),
-        InlineKeyboardButton(
-            text=" 𝗕𝗔𝗦𝗜𝗖 𝗛𝗘𝗟𝗣 👮", callback_data="mrjoker_basichelp"
+            text="༒ 𝙰𝙳𝙳 Free De La Hoya 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ༒",url="http://t.me/FreeDeLaHoyarobot?startgroup=true"
         ),
     ],
-    
     [
-        InlineKeyboardButton(text="➕ 𝐀𝐃𝐃 𝐌𝐑.𝐉𝐎𝐊𝐄𝐂 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕", url="http://t.me/Mrjokerlk_bot?startgroup=true"),
+        InlineKeyboardButton(
+          text="༺ 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 & 𝙷𝙴𝙻𝙿 ༻", callback_data="help_back"
+        ),
+    ],
+    [
+        InlineKeyboardButton(
+          text="༄ 𝚄𝙿𝙳𝙰𝚃𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ༄", url="https://t.me/PigasusUpdates"
+        ),
+      
+        InlineKeyboardButton(
+          text="★ 𝙲𝙷𝙴𝙲𝙺 𝙼𝚈 𝙵𝚁𝙸𝙴𝙽𝙳 ★", url="https://t.me/VALTAOITHEBOT"
+        ),
+    ],
+         
+    [
+       InlineKeyboardButton(
+           text="✫ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝚃 ✫", url="https://t.me/PigasusSupport"
+         ),
+    ],
+    [
+      InlineKeyboardButton(
+           text="彡 OWNER  彡", url="https://t.me/Rohith_no_1"
+        ),
     ],
 ]
 
 
 HELP_STRINGS = """
 **SETTINGS**
-**𝐂𝐥𝐢𝐜𝐤 𝐨𝐧 𝐭𝐡𝐞 𝐛𝐮𝐭𝐭𝐨𝐧𝐬 𝐛𝐞𝐥𝐨𝐰 𝐭𝐨 𝐠𝐞𝐭 𝐝𝐨𝐜𝐮𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧 𝐚𝐛𝐨𝐮𝐭 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐜 𝐦𝐨𝐝𝐮𝐥𝐞𝐬**[🤖](https://telegra.ph/file/6525d89de5b72003d80fa.png)"""
+`Click on the buttons below to get documentation about specific modules..`)"""
 
 
 
-DONATE_STRING = """ @kavinduaj"""
-
+DONATE_STRING = """Heya, glad to hear you want to donate!
+ @Rohith_no_1's 💕"""s
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
@@ -225,17 +239,23 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
  
             )
-    else:
+   else:
         update.effective_message.reply_photo(
-            MRJOKER_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            MRJOKER_IMAGS, caption= "<code>Free De La Hoya ʜᴇʀᴇ ғᴏʀ ʏᴏᴜ❤\nI am Awake Since</code>: <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="𝗦𝗨𝗣𝗣𝗢𝗥𝗧", url="t.me/lkhitech")]]
+                [
+                  [
+                  InlineKeyboardButton(text="【 ✗Sᴜᴘᴘᴏʀᴛ✗ 】", url="https://t.me/PigasusSupport")
+                  ],
+                  [
+                  InlineKeyboardButton(text="【 ✗Cʀᴇᴀᴛᴇʀ✗ 】", url="https://t.me/ROHITH_NO_1")
+                  ]
+                ]
             ),
         )
-        
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
     # Log the error before we do anything else, so we can see it even if something breaks.
@@ -308,7 +328,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "❮❮❮❮🤡 𝗠𝗿.𝗝𝗼𝗸𝗲𝗿 𝗛𝗲𝗹𝗽 𝗳𝗼𝗿 *{}* 𝗺𝗼𝗱𝘂𝗹𝗲 🤡❯❯❯❯:\n".format(
+                "FREE DE LA HOYA INFO :\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -366,10 +386,10 @@ def mrjoker_about_callback(update, context):
     if query.data == "mrjoker_":
         query.message.edit_text(
             
-            text=f"*🤡 Hi again!  The name's {dispatcher.bot.first_name} 🤡 \n\nAs  You I'm a next generational group management bot developed by HITECH🇱🇰 TEAM .* "
-            f"\n\n 🔥 Join [HITECH](https://t.me/lkhitech) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
+            text=f"* Hi again!  The name's {dispatcher.bot.first_name} \n\nAs  You I'm a next generational group management bot developed by Valt aoi.* "
+            f"\n\n 🔥 Join [pigasus](https://t.me/pigasusupdates) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
             f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/6525d89de5b72003d80fa.png)"
+            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)]https://telegra.ph/file/c58844e157400ec912c82.jpg)"
             f"\n\n Report error /bugs click the Button",
           
             parse_mode=ParseMode.MARKDOWN,
@@ -378,10 +398,10 @@ def mrjoker_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url="https://www.youtube.com/c/KavinduAj"
+                            text="Support", url="t.me/pigasussupport"
                         ),
                         InlineKeyboardButton(
-                            text="🇱🇰𝗛𝗜𝗧𝗘𝗖𝗛 𝗚𝗥𝗢𝗨𝗣", url="https://t.me/hitechlkgroup"
+                            text="Updates", url="https://t.me/Pigasusupdates"
                         ),
                     ],
                     [InlineKeyboardButton(text="⬅️ 𝗕𝗔𝗖𝗞", callback_data="mrjoker_back")],
@@ -402,7 +422,7 @@ def mrjoker_about_callback(update, context):
             text=f"*Here's basic Help regarding* *How to use Me?*"
             f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• Powerfull Telegram group Management Bot\n"
-            f"\n• Than send `/admincache@Mrjokerlk_bot` in that chat to refresh admin list in My database.\n"
+            f"\n• Than in that chat to refresh admin list in My database.\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -799,7 +819,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "𝙄 𝘼ᴍ 𝘼ʟɪᴠᴇ 🤡")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "My fafnir is ready for battle 🔥")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
@@ -863,7 +883,7 @@ def main():
 
 
 if __name__ == "__main__":
-    LOGGER.info("Successfully loaded MR.JOKER 🤡 modules: " + str(ALL_MODULES))
+    LOGGER.info("Successfully loaded MR.JOKER modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()
