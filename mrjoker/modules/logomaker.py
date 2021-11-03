@@ -249,7 +249,7 @@ TELEGRAPH_MEDIA_LINKS = ["https://telegra.ph/file/d1838efdafce9fe611d0c.jpg",
 
 
 
-@register(pattern="^/tlogo ?(.*)")
+@register(pattern="^/logo ?(.*)")
 async def lego(event):
  quew = event.pattern_match.group(1)
  if event.sender_id == OWNER_ID:
@@ -288,7 +288,7 @@ async def lego(event):
     if os.path.exists(fname):
             os.remove(fname)
  except Exception as e:
-    await event.reply(f'Error, Report @lkhitech, {e}')
+    await event.reply('Error, Report @VALTAOITHEBOTHERO, {e}')
 
 
 
@@ -305,7 +305,7 @@ async def lego(event):
        return
     else:
        pass
- await event.reply('Creating your logo...wait!🤡')
+ await event.reply('Creating your logo...wait!')
  try:
     text = event.pattern_match.group(1)
     img = Image.open('./mrjoker/pack/blackimg.jpg')
@@ -324,11 +324,11 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="yellow", stroke_width=25, stroke_fill="white")
     fname2 = "LogoMakeBy_MRJOKER.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="🤡")
+    await tbot.send_file(event.chat_id, fname2, caption="")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Report @lkhitech, {e}')
+   await event.reply('Error Report @VALTAOITHEBOTHERO, {e}')
 
 
 
@@ -345,7 +345,7 @@ async def lego(event):
        return
     else:
        pass
- await event.reply('Creating your logo...wait!🤡')
+ await event.reply('Creating your logo...wait!')
  try:
     text = event.pattern_match.group(1)
     img = Image.open('./mrjoker/pack/fjoker.jpg')
