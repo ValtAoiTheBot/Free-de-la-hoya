@@ -120,13 +120,16 @@ buttons = [
 
 
 HELP_STRINGS = """
-**SETTINGS**
-`Click on the buttons below to get documentation about specific modules..`)"""
+Hey there! My name is [FREE DE LA HOYA!](https://telegra.ph/file/c58844e157400ec912c82.jpg) 
+I'm a Half Elf and help admins manage their groups with Some Powerful Features! 
+\n Have a look at the following for an idea of some of the things I can help you with."""
 
+DONATE_STRING = """
+Heya, glad to hear you want to donate!
+I'd Like you to Donate that Money to my owner ‣ @ROHITH_NO_1. 
+Thanks!
+"""
 
-
-DONATE_STRING = """Heya, glad to hear you want to donate!
- @Rohith_no_1's 💕"""s
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
