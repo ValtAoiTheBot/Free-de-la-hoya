@@ -240,7 +240,6 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
- 
             )
    else:
         update.effective_message.reply_photo(
