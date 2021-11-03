@@ -679,8 +679,6 @@ GETLINK_HANDLER = CommandHandler(
 STAFFLIST_HANDLER = CommandHandler("slist", slist, filters=Filters.user(OWNER_ID))
 REDDIT_MEMES_HANDLER = DisableAbleCommandHandler("rmeme", rmemes)
 
-GITHUB_HANDLER = DisableAbleCommandHandler("git", github, admin_ok=True)
-REPO_HANDLER = DisableAbleCommandHandler("repo", repo, pass_args=True, admin_ok=True)
 PASTE_HANDLER = DisableAbleCommandHandler("paste", paste, pass_args=True)
 GET_PASTE_HANDLER = DisableAbleCommandHandler(
     "getpaste", get_paste_content, pass_args=True
