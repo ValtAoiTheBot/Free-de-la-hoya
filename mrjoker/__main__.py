@@ -85,13 +85,6 @@ I Am An Cartoon Themed Group Management Bot.
 Built By Pigasus group admin, I Specialize In Managing Cartoon Eccentric Communities.
 """
 
-STICKERS = (
-      "CAACAgUAAx0CaaMMbAACGH5hhLU8ApjSnVz-WcGZ25da0TYNVwAC9gMAAshgIFQLbATT2uuD1yIE",
-      "CAACAgUAAx0CaaMMbAACGIRhhLVTdZl4SO2C5O3-CAOdHGwEEAACSQQAAuAOKVT8tOYrry7x0CIE",
-      "CAACAgUAAx0CaaMMbAACGIthhLXhy0jkszJ9fzZGi0yyQJ3IBQACggQAAhpRKVRo1L3FXF_uRCIE",
-)    
-
-
 buttons  = [
     [
         InlineKeyboardButton(
@@ -241,11 +234,6 @@ def start(update: Update, context: CallbackContext):
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
-        else:
-            update.effective_message.reply_sticker(
-                random.choice(STICKERS),
-                timeout=60,
-            )
             update.effective_message.reply_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
