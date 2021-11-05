@@ -48,15 +48,15 @@ async def paste(content):
 async def inline_help_func(__HELP__):
     buttons = InlineKeyboard(row_width=2)
     buttons.add(
-        InlineKeyboardButton("🤡 𝗚𝗲𝘁 𝗠𝗼𝗿𝗲 𝗛𝗲𝗹𝗽 🤡", url=f"t.me/{BOT_USERNAME}?start=start"),
-        InlineKeyboardButton("💥 𝗚𝗼 𝗜𝗻𝗹𝗶𝗻𝗲! 💥", switch_inline_query_current_chat=""),
+        InlineKeyboardButton("𝗚𝗲𝘁 𝗠𝗼𝗿𝗲 𝗛𝗲𝗹𝗽", url=f"t.me/{BOT_USERNAME}?start=start"),
+        InlineKeyboardButton("𝗚𝗼 𝗜𝗻𝗹𝗶𝗻𝗲!", switch_inline_query_current_chat=""),
     )
     answerss = [
         InlineQueryResultArticle(
             title="𝐈𝐧𝐥𝐢𝐧𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬",
             description="𝙈𝙧.𝙅𝙤𝙠𝙚𝙧 𝙃𝙚𝙡𝙥 𝙍𝙚𝙡𝙖𝙩𝙚𝙙 𝙏𝙤 𝙄𝙣𝙡𝙞𝙣𝙚 𝙐𝙨𝙖𝙜𝙚",
             input_message_content=InputTextMessageContent(__HELP__),
-            thumb_url="https://telegra.ph/file/6525d89de5b72003d80fa.png",
+            thumb_url="https://telegra.ph/file/55a0d3e8572c347e7fde4.jpg",
             reply_markup=buttons,
         )
     ]
@@ -68,12 +68,12 @@ async def alive_function(answers):
     buttons = InlineKeyboard(row_width=2)
     bot_state = "Dead" if not await app.get_me() else "Alive"
     buttons.add(
-        InlineKeyboardButton("🤡 𝐌𝐚𝐢𝐧 𝐁𝐨𝐭 🤡", url="https://t.me/mrjokerpro_bot"),
-        InlineKeyboardButton("💥 𝗚𝗼 𝗜𝗻𝗹𝗶𝗻𝗲! 💥", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(" 𝐌𝐚𝐢𝐧 𝐁𝐨𝐭 ", url="https://t.me/FREEDELAHOYAROBOT"),
+        InlineKeyboardButton(" 𝗚𝗼 𝗜𝗻𝗹𝗶𝗻𝗲!", switch_inline_query_current_chat=""),
     )
 
     msg = f"""
-**[๓r.ว໐kēr 🤡](https://github.com/kjeymax/MR-JOKER_BOT):**
+**[FREE DE LA HOYA](t.me/VALTAOITHEBOT):**
 **MainBot:** `{bot_state}`
 **UserBot:** `Alive`
 **Python:** `3.9`
@@ -86,7 +86,7 @@ async def alive_function(answers):
         InlineQueryResultArticle(
             title="𝐀𝐥𝐢𝐯𝐞",
             description="𝘾𝙝𝙚𝙘𝙠 𝘽𝙤𝙩❜𝙨 𝙎𝙩𝙖𝙩𝙨",
-            thumb_url="https://telegra.ph/file/6525d89de5b72003d80fa.png",
+            thumb_url="https://telegra.ph/file/04c962f6e67d2fad136ab.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
             ),
