@@ -80,7 +80,7 @@ async def alive_function(answers):
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/{BOT_USERNAME}) 
+**My friend:** [BOT](t.me/VALTAOITHEBOT) 
 """
     answers.append(
         InlineQueryResultArticle(
