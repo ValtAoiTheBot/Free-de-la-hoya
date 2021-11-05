@@ -108,7 +108,7 @@ buttons  = [
          
     [
        InlineKeyboardButton(
-           text="✫ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝚃 ✫", url="https://t.me/PigasusSupport"
+           text="✫ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝚃 ✫", url="https://t.me/PegasusSupportOfficial"
          ),
     ],
     [
