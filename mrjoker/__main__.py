@@ -23,7 +23,7 @@ from mrjoker import (
     updater,
 )
 
-from mrjokermrjoker.modules import ALL_MODULES
+from mrjoker.modules import ALL_MODULES
 from mrjoker.modules.helper_funcs.chat_status import is_user_admin
 from mrjoker.modules.helper_funcs.misc import paginate_modules
 from mrjoker.modules.connection import connected
