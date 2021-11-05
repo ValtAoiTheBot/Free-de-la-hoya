@@ -54,7 +54,7 @@ async def inline_help_func(__HELP__):
     answerss = [
         InlineQueryResultArticle(
             title="𝐈𝐧𝐥𝐢𝐧𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬",
-            description="𝙈𝙧.𝙅𝙤𝙠𝙚𝙧 𝙃𝙚𝙡𝙥 𝙍𝙚𝙡𝙖𝙩𝙚𝙙 𝙏𝙤 𝙄𝙣𝙡𝙞𝙣𝙚 𝙐𝙨𝙖𝙜𝙚",
+            description="FREE DE LA HOYA 𝙃𝙚𝙡𝙥 𝙍𝙚𝙡𝙖𝙩𝙚𝙙 𝙏𝙤 𝙄𝙣𝙡𝙞𝙣𝙚 𝙐𝙨𝙖𝙜𝙚",
             input_message_content=InputTextMessageContent(__HELP__),
             thumb_url="https://telegra.ph/file/55a0d3e8572c347e7fde4.jpg",
             reply_markup=buttons,
