@@ -18,19 +18,18 @@ from mrjoker import (
     LOGGER,
     OWNER_ID,
     PORT,
+    SUPPORT_CHAT,
     TOKEN,
     URL,
     WEBHOOK,
     SUPPORT_CHAT,
-    BOT_USERNAME,
-    BOT_NAME,
-    EVENT_LOGS,
-    ubot,
-    )
+    dispatcher,
+    StartTime,
+    telethn,
+    pbot,
+    updater,
+)
 
-# needed to dynamically load modules
-# NOTE: Module order is not guaranteed, specify that in the config file!
-from mrjoker.events import register
 from mrjoker.modules import ALL_MODULES
 from mrjoker.modules.helper_funcs.chat_status import is_user_admin
 from mrjoker.modules.helper_funcs.alternate import typing_action
