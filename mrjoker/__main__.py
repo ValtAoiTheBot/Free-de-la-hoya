@@ -25,14 +25,6 @@ from mrjoker import (
     BOT_USERNAME,
     BOT_NAME,
     EVENT_LOGS,
-    HELP_IMG,
-    GROUP_START_IMG,
-    CUTIEPII_PHOTO,
-    dispatcher,
-    StartTime,
-    telethn,
-    updater,
-    pgram,
     ubot,
     )
 
