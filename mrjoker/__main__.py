@@ -61,11 +61,16 @@ MRJOKER_AUD = "https://audio.jukehost.co.uk/kKJkdHgoMPeqdel4sDrEHr7m4U6o4Xya"
 
 PM_START_TEXT = """
  Hey There, I'm [Free De La Hoya](https://telegra.ph/file/c71b7f255824195618a9d.jpg)
-I Am An Cartoon Themed Group Management Bot.
-Built By Pigasus group admin, I Specialize In Managing Cartoon Eccentric Communities.
+*hello! {},*
+*I am an Anime themed advance group management bot with a lot of New Features.*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+♆ *Uptime:* `{}`
+♆ `{}` *users, across* `{}` *chats.*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+☫ Checkout The Help Buttons To Check My Abilities 𖤐𖤐
 """
 
-buttons  = [
+buttons = [
     [
         InlineKeyboardButton(
             text="༒ 𝙰𝙳𝙳 Free De La Hoya 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ༒",url="http://t.me/FreeDeLaHoyarobot?startgroup=true"
@@ -215,8 +220,13 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
+            first_name = update.effective_user.first_name
             update.effective_message.reply_text(
-                PM_START_TEXT,
+                PM_START_TEXT.format(
+                    escape_markdown(first_name),
+                    escape_markdown(uptime),
+                    sql.num_users(),
+                    sql.num_chats()),                        
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
