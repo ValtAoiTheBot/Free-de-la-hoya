@@ -1,9 +1,16 @@
+import html
+import os
+import json
 import importlib
 import time
 import re
+import sys
+import traceback
+import mrjoker.modules.sql.users_sql as sql
+
+
 from sys import argv
 from typing import Optional
-
 from mrjoker import (
     ALLOW_EXCL,
     CERT_PATH,
@@ -11,23 +18,32 @@ from mrjoker import (
     LOGGER,
     OWNER_ID,
     PORT,
-    SUPPORT_CHAT,
     TOKEN,
     URL,
     WEBHOOK,
     SUPPORT_CHAT,
+    BOT_USERNAME,
+    BOT_NAME,
+    EVENT_LOGS,
+    HELP_IMG,
+    GROUP_START_IMG,
+    CUTIEPII_PHOTO,
     dispatcher,
     StartTime,
     telethn,
-    pbot,
     updater,
-)
+    pgram,
+    ubot,
+    )
 
+# needed to dynamically load modules
+# NOTE: Module order is not guaranteed, specify that in the config file!
+from mrjoker.events import register
 from mrjoker.modules import ALL_MODULES
 from mrjoker.modules.helper_funcs.chat_status import is_user_admin
+from mrjoker.modules.helper_funcs.alternate import typing_action
 from mrjoker.modules.helper_funcs.misc import paginate_modules
-from mrjoker.modules.connection import connected
-
+from mrjoker.modules.disable import DisableAbleCommandHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -44,9 +60,11 @@ from telegram.ext import (
     Filters,
     MessageHandler,
 )
+
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
-
+from pyrogram import Client, idle
+from telethon import Button
 
 def get_readable_time(seconds: int) -> str:
     count = 0
