@@ -363,11 +363,11 @@ def help_button(update, context):
                 ),
             )
 
-        # ensure no spinny white circle
+         # ensure no spinny white circle
         context.bot.answer_callback_query(query.id)
         # query.message.delete()
 
-     except BadRequest:
+    except BadRequest:
         pass
     
     
