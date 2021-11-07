@@ -369,20 +369,51 @@ def help_button(update, context):
 
     except BadRequest:
         pass
-    
-    
+
 
 @run_async
 def mrjoker_about_callback(update, context):
     query = update.callback_query
-    if query.data == "mrjoker_":
+    if query.data == "sophia_":
         query.message.edit_text(
-            
-            text=f"*🤡 Hi again!  The name's {dispatcher.bot.first_name} 🤡 \n\nAs  You I'm a next generational group management bot developed by HITECH🇱🇰 TEAM .* "
-            f"\n\n 🔥 Join [HITECH](https://t.me/lkhitech) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
-            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/6525d89de5b72003d80fa.png)"
-            f"\n\n Report error /bugs click the Button",
+            text=""" My name is *Free de la hoya*, I have been written with Pyrogram and Telethon.. I'm online since 10 October 2021 and is constantly updated!
+*Bot Version: 3.0*
+\n*Bot Developer:*
+-  @Kwannon
+\n* Updates Channel:* @pigasusUpdates
+* Support Chat:* @pigasusSupport
+                 \n\n* And finally special thanks of gratitude to all my users who relied on me for managing their groups, I hope you will always like me; My developers are constantly working to improve me!
+                 \n\n *Licensed under the GNU Affero General Public Lisence v3.0*
+                 \n© 2020 - 2021 @psylocke_robot. All Rights Reserved """,
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Back", callback_data="sophia_back")
+                 ]
+                ]
+            ),
+        )
+    elif query.data == "mrjoker_back":
+        query.message.edit_text(
+                PM_START_TEXT,
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode=ParseMode.MARKDOWN,
+                timeout=60,
+                disable_web_page_preview=False,
+        )
+
+        
+
+    elif query.data == "mrjoker_basichelp":
+        query.message.edit_text(
+            text=f"*Here's basic Help regarding* *How to use Me*❓"
+            f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true) 🧚‍♀️\n"
+            f"\n• After adding promote me manually with full rights for faster experience 🗯\n"
+            f"\n• Than send `/admincache@Psylocke_robot` in that chat to refresh admin list in My database 🗂\n"
+            f"\n\n*All done now use below given button's to know about use!* 🗒\n"
+            f"",
           
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
