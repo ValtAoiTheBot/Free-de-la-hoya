@@ -1,7 +1,7 @@
 import pyrogram
 
-from mrjoker.renamer import rename_cb, cancel_extract, send_start
-from mrjoker.renamer import force_name
+from mrjoker.renamer.help_text import rename_cb, cancel_extract, send_start
+from mrjoker.renamer.rename_file import force_name
 from script import script
 
 
