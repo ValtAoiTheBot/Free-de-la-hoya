@@ -53,7 +53,6 @@ ujson
 pretty_errors
 TgCrypto
 Pyrogram
-youtube-dl
 youtube-search-python
 asyncio
 dateparser==1.0.0
@@ -81,6 +80,5 @@ opencv-python-headless
 pytube
 tldextract
 cloudmersive_virus_api_client
-youtube_search
 pretty-errors
 odmantic
