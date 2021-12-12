@@ -13,7 +13,6 @@ googletrans
 gpytranslate
 gtts
 faker
-yt_dlp
 beautifulsoup4
 requests==2.20.0
 python-telegram-bot==12.8
