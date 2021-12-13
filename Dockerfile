@@ -1,6 +1,6 @@
 FROM python:3.9.1-buster
 
-WORKDIR /root/freedelahoya
+WORKDIR /root/mrjoker
 
 COPY . .
 
