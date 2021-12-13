@@ -79,7 +79,6 @@ if ENV:
     BOT_ID = int(os.environ.get("BOT_ID", None))
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
     DB_URI = os.environ.get("DATABASE_URL")
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
     DONATION_LINK = os.environ.get("DONATION_LINK")
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
@@ -98,7 +97,6 @@ if ENV:
     TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
     AI_API_KEY = os.environ.get("AI_API_KEY", None)
     #STRING_SESSION = os.environ.get("STRING_SESSION", None)
-    BOT_NAME = os.environ.get("BOT_NAME", True) # Name Of your Bot.
     WALL_API = os.environ.get("WALL_API", None)
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
@@ -106,6 +104,7 @@ if ENV:
     GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
+    MONGO_DB_URL = os.environ.get("MONGO_DB_URI", None)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
